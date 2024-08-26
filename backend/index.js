@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser())
 app.use(cors({
-    origin:process.env.FRONTEND_URL,
+    origin:https://e-commerce-frontend-ch7m.onrender.com/,
     credentials:true
 }
   
