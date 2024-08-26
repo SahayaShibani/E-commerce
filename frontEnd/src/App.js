@@ -28,7 +28,7 @@ function App() {
  
   const fetchUserDetails = async()=>{
 
-    const data = await fetch("http://localhost:8080/api/user-details" , {
+    const data = await fetch("https://e-commerce-backend-c2it.onrender.com/api/user-details" , {
       method:"get",
       credentials:"include"
     })
@@ -39,7 +39,7 @@ function App() {
   }
 
   const fetchCount = async()=>{
-    const countResponse = await fetch("http://localhost:8080/api/countAddtocart",{
+    const countResponse = await fetch("https://e-commerce-backend-c2it.onrender.com/api/countAddtocart",{
       method:"get",
       credentials:"include"
     })
