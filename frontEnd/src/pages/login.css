@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#login{
+    box-shadow: -3px -3px 7px #ffffff73 , 3px 3px 5px rgba(94,104,121,.288);
+}
+
+.login-btn{
+    background-color:#E37383 ;
+}
+.sign-up{
+    color: #E37383;
+}
+.sign-up:hover{
+ color: #E37383;
+ text-decoration: underline 1px solid #E37383;
+}
+
