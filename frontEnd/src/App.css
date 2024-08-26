@@ -1,0 +1,72 @@
+.customShadow{
+  box-shadow: 0px 10px 10px rgba(0,0,0,.1);
+}
+
+.userTable{
+  @apply bg-white 
+}
+
+.userTable th{
+  @apply border text-base font-medium p-3
+}
+
+.userTable td{
+  @apply border text-base text-center p-2
+}
+
+.custom-role{
+  box-shadow: 0px 0px 10px gray , -1px -1px 10px white;
+}
+.upload-product-btn{
+  border-color: #E37383;
+  color: #E37383;
+}
+
+.upload-product-btn:hover{
+  background-color: #E37383;
+  color: white;
+}
+.close-btn:hover{
+  color: #E37383;
+  cursor: pointer;
+}
+.upload-p{
+  color: #E37383;
+}
+.upload-btn{
+  background-color: #E37383;
+}
+.upload-btn:hover{
+  background-color: #f5677d;
+}
+.imageRemove{
+  background-color: #E37383;
+}
+/* .upload-product{
+  background-color: #E37383;
+} */
+
+/* scrollbar hidden */
+
+.scrollebar-none::-webkit-scrollbar{
+display: none;
+}
+.bg-color{
+  background-color: #E37383;
+}
+.bg-color:hover{
+  background-color: #e86377;
+}
+.text-color{
+color: #E37383;
+}
+.border-color{
+  border-color: #E37383;
+}
+.hover-btn:hover{
+background-color: #E37383;
+}
+.bg-hover:hover{
+  background-color: white;
+  color: #E37383;
+}
