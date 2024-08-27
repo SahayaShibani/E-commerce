@@ -13,7 +13,8 @@ app.use(bodyParser.json());
 app.use(cookieParser())
 app.use(cors(
     {
-    origin:"https://e-commerce-frontend-ch7m.onrender.com",
+    // origin:"https://e-commerce-frontend-ch7m.onrender.com",
+        origin:"http://localhost:3000",
     credentials:true
 }
   
