@@ -11,10 +11,11 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser())
-app.use(cors({
-    origin:"https://e-commerce-frontend-ch7m.onrender.com",
-    credentials:true
-}
+app.use(cors(
+//     {
+//     origin:"https://e-commerce-frontend-ch7m.onrender.com",
+//     credentials:true
+// }
   
 ));
 
