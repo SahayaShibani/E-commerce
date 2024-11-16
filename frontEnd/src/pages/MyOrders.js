@@ -15,7 +15,7 @@ function MyOrders() {
     const fetchData = async () => {
 
         setLoading(true);
-        const response = await fetch("http://localhost:8080/api/view-order-products", {
+        const response = await fetch("https://e-commerce-backend-c2it.onrender.com/api/view-order-products", {
             method: "get",
             credentials: "include",
             headers: {
@@ -41,7 +41,7 @@ console.log('====================================');
     const increaseQty = async (id, qty) => {
         console.log(id);
        
-        const response = await fetch("http://localhost:8080/api/update-cart-product", {
+        const response = await fetch("https://e-commerce-backend-c2it.onrender.com/api/update-cart-product", {
             method: "post",
             credentials: "include",
             headers: {
@@ -63,7 +63,7 @@ console.log('====================================');
     const decreaseQty = async (id, qty) => {
        
        if(qty >=2){
-        const response = await fetch("http://localhost:8080/api/update-cart-product", {
+        const response = await fetch("https://e-commerce-backend-c2it.onrender.com/api/update-cart-product", {
             method: "post",
             credentials: "include",
             headers: {
@@ -91,7 +91,7 @@ console.log('====================================');
         console.log("New Data" , newData);
     
        
-         const response = await fetch("http://localhost:8080/api/delete-order-product", {
+         const response = await fetch("https://e-commerce-backend-c2it.onrender.com/api/delete-order-product", {
              method: "post",
              credentials: "include",
              headers: {
