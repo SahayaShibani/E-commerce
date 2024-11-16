@@ -3,6 +3,7 @@ import Context from "../context";
 import displayINRCurrency from '../helper/displayCurrency';
 import { MdDelete } from "react-icons/md";
 import {toast} from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
 
@@ -10,10 +11,11 @@ const Cart = () => {
     const [loading, setLoading] = useState(true);
     const context = useContext(Context);
     const loadingCard = new Array(context.cartCount).fill(null)
+    const navigate = useNavigate();
 
     const fetchData = async () => {
         setLoading(true);
-        const response = await fetch("https://e-commerce-backend-c2it.onrender.com/api/view-cart-product", {
+        const response = await fetch("http://localhost:8080/api/view-cart-product", {
             method: "get",
             credentials: "include",
             headers: {
@@ -37,7 +39,7 @@ const Cart = () => {
     const increaseQty = async (id, qty) => {
         console.log(id);
         console.log("Hi");
-        const response = await fetch("https://e-commerce-backend-c2it.onrender.com/api/update-cart-product", {
+        const response = await fetch("http://localhost:8080/api/update-cart-product", {
             method: "post",
             credentials: "include",
             headers: {
@@ -59,7 +61,7 @@ const Cart = () => {
     const decreaseQty = async (id, qty) => {
        
        if(qty >=2){
-        const response = await fetch("https://e-commerce-backend-c2it.onrender.com/api/update-cart-product", {
+        const response = await fetch("http://localhost:8080/api/update-cart-product", {
             method: "post",
             credentials: "include",
             headers: {
@@ -83,7 +85,7 @@ const Cart = () => {
     const deleteItem = async (id) => {
       
        
-         const response = await fetch("https://e-commerce-backend-c2it.onrender.com/api/delete-cart-product", {
+         const response = await fetch("http://localhost:8080/api/delete-cart-product", {
              method: "post",
              credentials: "include",
              headers: {
@@ -114,7 +116,7 @@ const Cart = () => {
   async  function handleSubmit(){
     console.log("I am from place order");
     
-    const response = await fetch("https://e-commerce-backend-c2it.onrender.com/api/placeOrder",{
+    const response = await fetch("http://localhost:8080/api/placeOrder",{
         method:"post",
         credentials: "include",
         headers:{
@@ -129,7 +131,8 @@ const Cart = () => {
         fetchData();
         console.log(result);
         
-        toast.success(result.message)
+        toast.success(result.message);
+        navigate("/myOrders")
     }
     console.log("result" , result);
     }
