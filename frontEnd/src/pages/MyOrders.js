@@ -127,8 +127,9 @@ console.log('====================================');
        <>
       <div className="container mx-auto flex flex-col justify-center items-center min-h-screen">
         <div className="text-center text-lg my-3">
+      <p className="bg-white py-5">Your orders</p>
           {data.length === 0 && !loading && (
-            <p className="bg-white py-5">No Data</p>
+            <p className="bg-white py-5">No Orders</p>
           )}
         </div>
 
