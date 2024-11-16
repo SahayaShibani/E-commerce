@@ -116,7 +116,7 @@ const Cart = () => {
   async  function handleSubmit(){
     console.log("I am from place order");
     
-    const response = await fetch("http://localhost:8080/api/placeOrder",{
+    const response = await fetch("https://e-commerce-backend-c2it.onrender.com/api/placeOrder",{
         method:"post",
         credentials: "include",
         headers:{
