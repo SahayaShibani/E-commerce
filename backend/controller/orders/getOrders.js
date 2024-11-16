@@ -6,16 +6,30 @@ const orderView = async (req, res) => {
         const userId = req.userId;
         // console.log(userId);
         
-        const allOrder = await addOrder.findOne(
+        const allOrder = await addOrder.find(
             {
                 userId
             }
         ).populate("productId");
-        // console.log("all orders" , allOrder);
+
+
+        let orders = [];
+        let quantity=[];
+        
+
+        for(let i=0;i<allOrder.length;i++){
+        
+            orders.push(...allOrder[i].productId)
+            quantity.push(...allOrder[i].quantity)
+        }
+
+        console.log(orders);
+        
+        
         
         return res.json({
-            data: allOrder.productId,
-            quantity:allOrder.quantity,
+            data:[...orders],
+            quantity:[...quantity],
             success: true,
             error: false
         })
